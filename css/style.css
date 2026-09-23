@@ -655,6 +655,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.75rem;
   color: var(--accent);
 }
+:root[data-theme="dark"] .course-meta { color: var(--text-muted); }
 
 /* ===== Experiência / Timeline ===== */
 .timeline {
