@@ -54,7 +54,7 @@ const I18N = {
     'skill7.name': 'Produtividade com IA',
     'skill7.desc': 'Apoio em criação de casos de teste, análise de requisitos, code review, documentação e mapeamento de riscos.',
     'skill8.name': 'Soft skills',
-    'skill8.desc': 'Comunicação com stakeholders, visão de negócio e gestão de processos.',
+    'skill8.desc': 'Comunicação que acompanha o desenvolvimento de ponta a ponta, equilibrando saúde do negócio e qualidade para o usuário final.',
 
     'cursos.index': '04 — Cursos',
     'cursos.title': 'Cursos e certificações',
@@ -213,7 +213,7 @@ const I18N = {
     'skill7.name': 'AI-assisted productivity',
     'skill7.desc': 'Support for writing test cases, requirements analysis, code review, documentation, and risk mapping.',
     'skill8.name': 'Soft skills',
-    'skill8.desc': 'Stakeholder communication, business acumen, and process management.',
+    'skill8.desc': 'Communication that follows development end-to-end, balancing business health and quality for the end user.',
 
     'cursos.index': '04 — Courses',
     'cursos.title': 'Courses & certifications',
