@@ -2,7 +2,7 @@
 
 Site pessoal desenvolvido para apresentar minha trajetória profissional como Analista de Qualidade de Software, com foco em testes manuais, automação e boas práticas de QA.
 
-**Acesse online:** _em breve_
+**Acesse online:** [thomastds.github.io/portfolio](https://thomastds.github.io/portfolio/)
 
 ## Sobre o projeto
 
