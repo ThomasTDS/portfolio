@@ -645,11 +645,12 @@ img { max-width: 100%; display: block; }
   background: var(--line-strong);
 }
 
-.timeline-results {
-  margin-top: 16px;
+.results-label {
+  margin-top: 20px;
   padding-top: 16px;
   border-top: 1px dashed var(--line-strong);
 }
+
 .timeline-results li::before { background: var(--accent); }
 
 .growth-note {
@@ -708,7 +709,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.92rem;
   margin: 0 0 14px;
 }
-.prev-role .showcase-label { margin-bottom: 10px; }
+.prev-role .showcase-label { color: var(--accent); margin-bottom: 10px; }
 .prev-role ul {
   color: var(--text-muted);
   font-size: 0.9rem;
