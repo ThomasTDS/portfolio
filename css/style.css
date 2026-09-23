@@ -543,8 +543,8 @@ img { max-width: 100%; display: block; }
   color: var(--text);
   font-size: 0.95rem;
 }
-.about-facts li span {
-  display: block;
+.about-facts li span { display: block; }
+.about-facts li span:first-child {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--accent);
