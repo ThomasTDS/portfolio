@@ -1,5 +1,14 @@
 document.documentElement.classList.add('js');
 
+// Alternância de tema claro/escuro
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  const current = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+  const next = current === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem('portfolio-theme', next); } catch (_) {}
+});
+
 // Menu mobile
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');

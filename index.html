@@ -8,8 +8,21 @@
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (() => {
+      try {
+        const theme = localStorage.getItem('portfolio-theme');
+        document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+        const lang = localStorage.getItem('portfolio-lang');
+        document.documentElement.dataset.lang = lang === 'en' ? 'en' : 'pt';
+      } catch (_) {
+        document.documentElement.dataset.theme = 'dark';
+        document.documentElement.dataset.lang = 'pt';
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -19,19 +32,33 @@
     <nav class="nav container">
       <a href="#topo" class="logo">TT<span>.</span></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
+      <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato" class="nav-cta">Contato</a></li>
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#formacao" data-i18n="nav.education">Formação</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#cursos" data-i18n="nav.courses">Cursos</a></li>
+        <li><a href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#contato" class="nav-cta" data-i18n="nav.contact">Contato</a></li>
       </ul>
+
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button class="lang-btn" data-lang="pt" type="button">PT</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" type="button">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.7 8.7 0 1 0 20.2 15.5Z"/></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="3.6" fill="currentColor"/><path stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 2.5V5M12 19v2.5M4.5 4.5l1.8 1.8M17.7 17.7l1.8 1.8M2.5 12H5M19 12h2.5M4.5 19.5l1.8-1.8M17.7 6.3l1.8-1.8"/></svg>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      </div>
     </nav>
   </header>
 
@@ -40,24 +67,27 @@
     <!-- HERO -->
     <section class="hero container">
       <div class="hero-intro reveal">
-        <p class="eyebrow">Analista de Qualidade de Software · QA Engineer</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Analista de Qualidade de Software · QA Engineer</p>
         <h1 class="hero-name">Thomas<br><span class="accent-word">Teixeira</span></h1>
-        <p class="hero-statement">Antes de reportar bugs, eu já administrava crises. A lógica continua a mesma — só o palco mudou.</p>
+        <p class="hero-statement" data-i18n="hero.statement">Antes de reportar bugs, eu já administrava crises. A lógica continua a mesma — só o palco mudou.</p>
       </div>
 
       <div class="hero-grid">
         <div class="hero-copy reveal">
-          <p class="hero-desc">
+          <p class="hero-desc" data-i18n="hero.desc">
             Testes manuais e automatizados com foco em <strong>Playwright</strong>, <strong>TypeScript</strong>,
             testes de API e integração com pipelines de <strong>CI/CD</strong>. Atuo reduzindo a distância entre
             a dúvida e a entrega confiável.
           </p>
-          <p class="hero-location">Santa Maria, Rio Grande do Sul, Brasil</p>
+          <p class="hero-location" data-i18n="hero.location">Santa Maria, Rio Grande do Sul, Brasil</p>
 
           <div class="hero-actions">
-            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-            <a href="#contato" class="btn btn-outline">Entrar em contato</a>
-            <a href="assets/cv/Thomas_Teixeira_Curriculo.pdf" class="btn btn-outline" download>Baixar CV</a>
+            <a href="#projetos" class="btn btn-primary" data-i18n="cta.viewProjects">Ver projetos</a>
+            <a href="#contato" class="btn btn-outline" data-i18n="cta.getInTouch">Entrar em contato</a>
+            <a href="assets/cv/Thomas_Teixeira_Curriculo.pdf" class="btn btn-outline" download>
+              <svg viewBox="0 0 24 24" width="16" height="16" class="btn-icon"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
+              <span data-i18n="cta.resume">Currículo</span>
+            </a>
           </div>
 
           <div class="hero-social">
@@ -84,25 +114,25 @@
     <!-- SOBRE -->
     <section id="sobre" class="section container">
       <div class="section-head reveal">
-        <span class="section-index">01 — Sobre</span>
-        <h2>Sobre mim</h2>
+        <span class="section-index" data-i18n="sobre.index">01 — Sobre</span>
+        <h2 data-i18n="sobre.title">Sobre mim</h2>
       </div>
 
       <div class="about-grid reveal">
         <div class="about-text">
-          <p>
+          <p data-i18n="sobre.p1">
             Minha relação com tecnologia começou cedo, explorando fan games, mods e ROM hacks. Para equilibrar
             essa bagagem técnica com uma visão mais humana e estratégica, me formei em Comunicação Social –
             Relações Públicas pela UFSM — uma escolha que ampliou minha capacidade de alinhar processos,
             negócios e pessoas.
           </p>
-          <p>
+          <p data-i18n="sobre.p2">
             Hoje atuo no ecossistema de Quality Assurance, reduzindo a distância entre a dúvida e a entrega
             confiável. Construí minha base em testes manuais e evoluí para automação, atuando no ciclo completo
             de QA: validação de regras de negócio, consultas SQL, automação de UI e API, testes de contrato,
             integração com pipelines de CI/CD e práticas iniciais de segurança de aplicações.
           </p>
-          <p>
+          <p data-i18n="sobre.p3">
             No dia a dia, também utilizo agentes de IA como ferramenta de produtividade — apoio na criação de
             casos de teste, análise de requisitos, code review, documentação e mapeamento de riscos — o que me
             permite manter o foco no que realmente importa: a qualidade da entrega.
@@ -110,10 +140,10 @@
         </div>
 
         <ul class="about-facts">
-          <li><span>Foco atual</span>Automação de testes &amp; Quality Engineering</li>
-          <li><span>Stack principal</span>Playwright, TypeScript, Postman, SQL</li>
-          <li><span>Idiomas</span>Português (nativo) · Inglês (C1 Avançado)</li>
-          <li><span>Localização</span>Santa Maria, RS, Brasil</li>
+          <li><span data-i18n="sobre.facts.focusLabel">Foco atual</span><span data-i18n="sobre.facts.focusValue">Automação de testes &amp; Quality Engineering</span></li>
+          <li><span data-i18n="sobre.facts.stackLabel">Stack principal</span><span>Playwright, TypeScript, Postman, SQL</span></li>
+          <li><span data-i18n="sobre.facts.langLabel">Idiomas</span><span data-i18n="sobre.facts.langValue">Português (nativo) · Inglês (C1 Avançado)</span></li>
+          <li><span data-i18n="sobre.facts.locationLabel">Localização</span><span data-i18n="sobre.facts.locationValue">Santa Maria, RS, Brasil</span></li>
         </ul>
       </div>
     </section>
@@ -121,17 +151,17 @@
     <!-- FORMAÇÃO -->
     <section id="formacao" class="section container">
       <div class="section-head reveal">
-        <span class="section-index">02 — Formação</span>
-        <h2>Formação acadêmica</h2>
+        <span class="section-index" data-i18n="formacao.index">02 — Formação</span>
+        <h2 data-i18n="formacao.title">Formação acadêmica</h2>
       </div>
 
       <div class="edu-card reveal">
         <div class="edu-head">
-          <h3>Bacharelado em Comunicação Social – Relações Públicas</h3>
+          <h3 data-i18n="formacao.degree">Bacharelado em Comunicação Social – Relações Públicas</h3>
           <span class="edu-period">2020 — 2026</span>
         </div>
         <p class="edu-institution">Universidade Federal de Santa Maria (UFSM)</p>
-        <p>
+        <p data-i18n="formacao.text">
           Costumo dizer que Relações Públicas e QA compartilham a mesma essência: gerenciar crises, prever
           riscos, traduzir impacto técnico em impacto de negócio e defender a "ponta" — seja a opinião pública,
           seja o usuário final de um sistema. Essa formação me deu uma visão estratégica e comunicativa que
@@ -144,166 +174,172 @@
     <!-- HABILIDADES -->
     <section id="habilidades" class="section container">
       <div class="section-head reveal">
-        <span class="section-index">03 — Habilidades</span>
-        <h2>Habilidades</h2>
+        <span class="section-index" data-i18n="habilidades.index">03 — Habilidades</span>
+        <h2 data-i18n="habilidades.title">Habilidades</h2>
       </div>
 
-      <div class="skills-layout">
       <div class="skills-grid reveal">
         <div class="skill-card">
-          <h3>Testes manuais</h3>
-          <p>Black Box, White Box, Smoke Testing, Exploratórios e Regressão.</p>
+          <h3 data-i18n="skill1.name">Testes manuais</h3>
+          <p data-i18n="skill1.desc">Black Box, White Box, Smoke Testing, Exploratórios e Regressão.</p>
         </div>
         <div class="skill-card">
-          <h3>Automação de testes</h3>
-          <p>UI, API e testes de contrato com Playwright, Cypress e Selenium.</p>
+          <h3 data-i18n="skill2.name">Automação de testes</h3>
+          <p data-i18n="skill2.desc">UI, API e testes de contrato com Playwright, Cypress e Selenium.</p>
         </div>
         <div class="skill-card">
-          <h3>Banco de dados</h3>
-          <p>Consultas e validações com SQL e PostgreSQL.</p>
+          <h3 data-i18n="skill3.name">Banco de dados</h3>
+          <p data-i18n="skill3.desc">Consultas e validações com SQL e PostgreSQL.</p>
         </div>
         <div class="skill-card">
           <h3>CI/CD &amp; Docker</h3>
-          <p>Esteiras de testes integradas ao CI/CD e ambientes em containers.</p>
+          <p data-i18n="skill4.desc">Esteiras de testes integradas ao CI/CD e ambientes em containers.</p>
         </div>
         <div class="skill-card">
-          <h3>Gestão de bugs</h3>
-          <p>Acompanhamento de releases e defeitos com Jira, Azure DevOps e TestRail.</p>
+          <h3 data-i18n="skill5.name">Gestão de bugs</h3>
+          <p data-i18n="skill5.desc">Acompanhamento de releases e defeitos com Jira, Azure DevOps e TestRail.</p>
         </div>
         <div class="skill-card">
-          <h3>Linguagens</h3>
+          <h3 data-i18n="skill6.name">Linguagens</h3>
           <p>TypeScript, JavaScript, PHP, Python, HTML e CSS.</p>
         </div>
         <div class="skill-card">
-          <h3>Produtividade com IA</h3>
-          <p>Apoio em criação de casos de teste, análise de requisitos, code review, documentação e mapeamento de riscos.</p>
+          <h3 data-i18n="skill7.name">Produtividade com IA</h3>
+          <p data-i18n="skill7.desc">Apoio em criação de casos de teste, análise de requisitos, code review, documentação e mapeamento de riscos.</p>
         </div>
         <div class="skill-card">
-          <h3>Soft skills</h3>
-          <p>Comunicação com stakeholders, visão de negócio e gestão de processos.</p>
+          <h3 data-i18n="skill8.name">Soft skills</h3>
+          <p data-i18n="skill8.desc">Comunicação com stakeholders, visão de negócio e gestão de processos.</p>
         </div>
-      </div>
-
-      <div class="skills-showcase reveal">
-        <p class="showcase-label">Um teste real, escrito por mim</p>
-        <div class="code-window">
-          <div class="code-window-head">
-            <span class="code-dots"><span></span><span></span><span></span></span>
-            <span class="code-title">login.spec.ts</span>
-          </div>
-          <pre class="code-body"><code><span class="ck">test</span>(<span class="cs">'bloqueia acesso com credenciais inválidas'</span>, <span class="ck">async</span> ({ page }) => {
-  <span class="ck">await</span> page.goto(<span class="cs">'/login'</span>);
-  <span class="ck">await</span> page.fill(<span class="cs">'#email'</span>, <span class="cs">'qa@exemplo.com'</span>);
-  <span class="ck">await</span> page.fill(<span class="cs">'#senha'</span>, <span class="cs">'senha-incorreta'</span>);
-  <span class="ck">await</span> page.click(<span class="cs">'#entrar'</span>);
-
-  <span class="ck">await</span> expect(page.getByText(<span class="cs">'Credenciais inválidas'</span>)).toBeVisible();
-});</code></pre>
-          <div class="code-pass">✓ 1 passed <span>(320ms)</span></div>
-        </div>
-      </div>
       </div>
     </section>
 
     <!-- CURSOS E CERTIFICAÇÕES -->
     <section id="cursos" class="section container">
       <div class="section-head reveal">
-        <span class="section-index">04 — Cursos</span>
-        <h2>Cursos e certificações</h2>
+        <span class="section-index" data-i18n="cursos.index">04 — Cursos</span>
+        <h2 data-i18n="cursos.title">Cursos e certificações</h2>
       </div>
 
-      <ul class="courses-list reveal">
-        <li><span class="course-name">Playwright Avançado: Domine seus testes!</span><span class="course-meta">Udemy · 2026</span></li>
-        <li><span class="course-name">Imersão Dev, 9ª Edição</span><span class="course-meta">Alura · 2025</span></li>
-        <li><span class="course-name">Quality Assurance: Plano de Testes e Gestão de Bugs</span><span class="course-meta">Alura · 2025</span></li>
-        <li><span class="course-name">Como construir um Backlog eficiente</span><span class="course-meta">Udemy · 2025</span></li>
-        <li><span class="course-name">Fundamentos em JavaScript</span><span class="course-meta">Grupo Voitto · 2025</span></li>
-        <li><span class="course-name">Six Sigma Green Belt</span><span class="course-meta">Grupo Voitto · 2024</span></li>
-        <li><span class="course-name">Pensamento Crítico e Analítico</span><span class="course-meta">Grupo Voitto · 2024</span></li>
-        <li><span class="course-name">Six Sigma Yellow Belt</span><span class="course-meta">Grupo Voitto · 2024</span></li>
-      </ul>
+      <div class="course-group reveal">
+        <p class="showcase-label" data-i18n="cursos.group1">Técnico &amp; QA</p>
+        <ul class="courses-list">
+          <li><span class="course-name">Playwright Avançado: Domine seus testes!</span><span class="course-meta">Udemy · 2026</span></li>
+          <li><span class="course-name">Quality Assurance: Plano de Testes e Gestão de Bugs</span><span class="course-meta">Alura · 2025</span></li>
+          <li><span class="course-name">Fundamentos em JavaScript</span><span class="course-meta">Grupo Voitto · 2025</span></li>
+          <li><span class="course-name">Como construir um Backlog eficiente</span><span class="course-meta">Udemy · 2025</span></li>
+        </ul>
+      </div>
+
+      <div class="course-group reveal">
+        <p class="showcase-label" data-i18n="cursos.group2">Processo &amp; pensamento analítico</p>
+        <ul class="courses-list">
+          <li><span class="course-name">Six Sigma Yellow Belt &amp; Green Belt</span><span class="course-meta">Grupo Voitto · 2024</span></li>
+          <li><span class="course-name">Pensamento Crítico e Analítico</span><span class="course-meta">Grupo Voitto · 2024</span></li>
+        </ul>
+      </div>
+
+      <div class="course-group reveal">
+        <p class="showcase-label" data-i18n="cursos.group3">Idiomas</p>
+        <ul class="courses-list">
+          <li><span class="course-name">EF SET English Certificate — C1 Advanced (69/100)</span><span class="course-meta" data-i18n="cursos.efset.meta">EF SET · Setembro de 2026</span></li>
+        </ul>
+      </div>
     </section>
 
     <!-- EXPERIÊNCIA -->
     <section id="experiencia" class="section container">
       <div class="section-head reveal">
-        <span class="section-index">05 — Experiência</span>
-        <h2>Experiência</h2>
+        <span class="section-index" data-i18n="experiencia.index">05 — Experiência</span>
+        <h2 data-i18n="experiencia.title">Experiência</h2>
       </div>
 
       <div class="timeline reveal">
         <div class="timeline-item">
           <div class="timeline-head">
-            <h3>Analista de QA <span>— Jetimob</span></h3>
-            <span class="timeline-period">nov. 2025 — ago. 2026 · 10 meses</span>
+            <h3 data-i18n="exp1.role">Analista de QA <span>— Jetimob</span></h3>
+            <span class="timeline-period" data-i18n="exp1.period">nov. 2025 — ago. 2026 · 10 meses</span>
           </div>
+          <p class="timeline-intro" data-i18n="exp1.intro">
+            Assumi a responsabilidade técnica pela qualidade num momento em que os produtos cresciam mais rápido
+            que a cobertura manual conseguia acompanhar, e passei a tratar testes manuais e automação como uma
+            frente só, não duas separadas.
+          </p>
           <ul>
-            <li>Execução de testes manuais funcionais, exploratórios, smoke test e regressivos em CRM, ERP, CMS, website e portal imobiliário.</li>
-            <li>Construção e manutenção de dezenas de cenários de testes automatizados por produto, com Playwright e TypeScript.</li>
-            <li>Testes de API via Postman, consultas SQL em PostgreSQL e integração das suítes automatizadas a pipelines de CI/CD.</li>
-            <li>Atuação em estratégia Shift-Left, construindo a suíte de testes em paralelo à evolução do sistema.</li>
+            <li data-i18n="exp1.b1">Execução de testes manuais funcionais, exploratórios, smoke test e regressivos em CRM, ERP, CMS, website e portal imobiliário.</li>
+            <li data-i18n="exp1.b2">Construção e manutenção de dezenas de cenários de testes automatizados por produto, com Playwright e TypeScript.</li>
+            <li data-i18n="exp1.b3">Passei a integrar testes de API via Postman e consultas SQL em PostgreSQL às suítes automatizadas, com execução em pipelines de CI/CD.</li>
+            <li data-i18n="exp1.b4">Também atuei em estratégia Shift-Left, construindo a suíte de testes em paralelo à evolução do sistema.</li>
           </ul>
           <ul class="timeline-results">
-            <li>Taxa superior a 90% de identificação de bugs antes da produção.</li>
-            <li>Documentação de 28 páginas de evidências de bugs no ERP antes do lançamento.</li>
-            <li>Construção de uma pipeline com mais de 100 testes automatizados.</li>
-            <li>Identificação, via SQL, de um bug crítico que permitiria dupla locação de imóvel com contrato ativo.</li>
-            <li>Contribuição para o lançamento do ERP e do CMS sem reports de bugs por parte dos clientes.</li>
+            <li data-i18n="exp1.r1">Isso resultou numa taxa superior a 90% de identificação de bugs antes da produção.</li>
+            <li data-i18n="exp1.r2">Documentação de 28 páginas de evidências de bugs no ERP antes do lançamento.</li>
+            <li data-i18n="exp1.r3">Construção de uma pipeline com mais de 100 testes automatizados.</li>
+            <li data-i18n="exp1.r4">Um dos achados mais relevantes foi um bug crítico, identificado via SQL, que permitiria dupla locação de imóvel com contrato ativo.</li>
+            <li data-i18n="exp1.r5">O ERP e o CMS foram lançados sem reports de bugs por parte dos clientes.</li>
           </ul>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-head">
-            <h3>Estágio em Testes/QA <span>— Jetimob</span></h3>
-            <span class="timeline-period">mai. 2025 — nov. 2025 · 7 meses</span>
+            <h3 data-i18n="exp2.role">Estágio em Testes/QA <span>— Jetimob</span></h3>
+            <span class="timeline-period" data-i18n="exp2.period">mai. 2025 — nov. 2025 · 7 meses</span>
           </div>
+          <p class="timeline-intro" data-i18n="exp2.intro">
+            Entrei na área sem experiência formal em QA e aprendi testando: primeiro manualmente, depois
+            automatizando o que se repetia com mais frequência.
+          </p>
           <ul>
-            <li>Testes manuais exploratórios, Black Box, White Box e Smoke Test diários, além de regressivos semanais antes dos deploys.</li>
-            <li>Validação de funcionalidades no website, CRM, ERP (gestão financeira e de aluguéis) e portal imobiliário.</li>
-            <li>Documentação de casos de teste e registro de bugs no Jira.</li>
+            <li data-i18n="exp2.b1">Testes manuais exploratórios, Black Box, White Box e Smoke Test diários, além de regressivos semanais antes dos deploys.</li>
+            <li data-i18n="exp2.b2">Validação de funcionalidades no website, CRM, ERP (gestão financeira e de aluguéis) e portal imobiliário.</li>
+            <li data-i18n="exp2.b3">Documentação de casos de teste e registro de bugs no Jira.</li>
           </ul>
           <ul class="timeline-results">
-            <li>Identificação de bugs críticos em APIs essenciais ao cadastro de imóveis.</li>
-            <li>Identificação de falhas na lógica de distribuição automática de leads do CRM.</li>
-            <li>Detecção de erros de lógica no ERP (somas, parcelamentos e repasses automatizados) antes da produção.</li>
+            <li data-i18n="exp2.r1">Identificação de bugs críticos em APIs essenciais ao cadastro de imóveis.</li>
+            <li data-i18n="exp2.r2">Encontrei falhas na lógica de distribuição automática de leads do CRM.</li>
+            <li data-i18n="exp2.r3">Detecção de erros de lógica no ERP (somas, parcelamentos e repasses automatizados) antes da produção.</li>
           </ul>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-head">
-            <h3>Estágio de Pré-Vendas/SDR <span>— Jetimob</span></h3>
-            <span class="timeline-period">out. 2023 — abr. 2025 · 1 ano 7 meses</span>
+            <h3 data-i18n="exp3.role">Estágio de Pré-Vendas/SDR <span>— Jetimob</span></h3>
+            <span class="timeline-period" data-i18n="exp3.period">out. 2023 — abr. 2025 · 1 ano 7 meses</span>
           </div>
+          <p class="timeline-intro" data-i18n="exp3.intro">
+            Antes de testar sistemas, testava discursos comerciais — a atenção a detalhes e padrões de
+            comportamento já vinha de lá.
+          </p>
           <ul>
-            <li>Qualificação de leads e identificação de oportunidades de negócio para o time de Closers.</li>
-            <li>Condução de conversas de descoberta e compreensão das necessidades dos potenciais clientes.</li>
-            <li>Agendamento de reuniões e acompanhamento de oportunidades ao longo do processo comercial.</li>
+            <li data-i18n="exp3.b1">Qualificação de leads e identificação de oportunidades de negócio para o time de Closers.</li>
+            <li data-i18n="exp3.b2">Condução de conversas de descoberta e compreensão das necessidades dos potenciais clientes.</li>
+            <li data-i18n="exp3.b3">Agendamento de reuniões e acompanhamento de oportunidades ao longo do processo comercial.</li>
           </ul>
           <ul class="timeline-results">
-            <li>Qualificação do maior cliente da história da empresa e recorde de MRR mensal entre os SDRs.</li>
-            <li>Recorde semanal de reuniões agendadas, com alta taxa de conversão em vendas.</li>
+            <li data-i18n="exp3.r1">Qualificação do maior cliente da história da empresa e recorde de MRR mensal entre os SDRs.</li>
+            <li data-i18n="exp3.r2">Recorde semanal de reuniões agendadas, com alta taxa de conversão em vendas.</li>
           </ul>
         </div>
       </div>
 
-      <p class="growth-note">
+      <p class="growth-note" data-i18n="exp.growthNote">
         Iniciei minha trajetória na Jetimob como SDR e migrei internamente para a área de Qualidade de Software,
         onde encontrei minha real vocação técnica.
       </p>
 
       <details class="prev-experience reveal">
-        <summary>Trajetória anterior — Objetiva Jr. Consultoria Empresarial (2021 — 2023)</summary>
-        <p>
+        <summary data-i18n="prev.summary">Trajetória anterior — Objetiva Jr. Consultoria Empresarial (2021 — 2023)</summary>
+        <p data-i18n="prev.text">
           Antes da Jetimob, construí dois anos e sete meses de experiência em consultoria empresarial júnior,
           passando por diferentes frentes de gestão e projetos. Essa trajetória desenvolveu habilidades que
           aplico diretamente em QA hoje: comunicação com stakeholders, visão de negócio, gestão de processos e
           organização orientada a resultados.
         </p>
         <ul>
-          <li><strong>Presidente Executivo</strong> (jan. 2023 — dez. 2023) — prospecção e gestão de 22 parceiros estratégicos; planejamento estratégico orientado por OKRs e KPIs.</li>
-          <li><strong>Diretor Comercial</strong> (abr. 2023 — dez. 2023) — recorde individual de prospecções via cold call; contribuição para a meta anual de vendas.</li>
-          <li><strong>Diretor de Projetos</strong> (jan. 2022 — fev. 2023) — gestão simultânea de 14 equipes de consultoria, com 100% das entregas em NPS promotor (média 100).</li>
-          <li><strong>Consultor Empresarial</strong> (jun. 2021 — dez. 2023) — trajetória iniciada como trainee, com evolução a consultor e gerente de projetos; 9 de 10 projetos avaliados com NPS 10.</li>
+          <li data-i18n="prev.item1"><strong>Presidente Executivo</strong> (jan. 2023 — dez. 2023) — prospecção e gestão de 22 parceiros estratégicos; planejamento estratégico orientado por OKRs e KPIs.</li>
+          <li data-i18n="prev.item2"><strong>Diretor Comercial</strong> (abr. 2023 — dez. 2023) — recorde individual de prospecções via cold call; contribuição para a meta anual de vendas.</li>
+          <li data-i18n="prev.item3"><strong>Diretor de Projetos</strong> (jan. 2022 — fev. 2023) — gestão simultânea de 14 equipes de consultoria, com 100% das entregas em NPS promotor (média 100).</li>
+          <li data-i18n="prev.item4"><strong>Consultor Empresarial</strong> (jun. 2021 — dez. 2023) — trajetória iniciada como trainee, com evolução a consultor e gerente de projetos; 9 de 10 projetos avaliados com NPS 10.</li>
         </ul>
       </details>
     </section>
@@ -311,36 +347,97 @@
     <!-- PROJETOS -->
     <section id="projetos" class="section container">
       <div class="section-head reveal">
-        <span class="section-index">06 — Projetos</span>
-        <h2>Projetos</h2>
+        <span class="section-index" data-i18n="projetos.index">06 — Projetos</span>
+        <h2 data-i18n="projetos.title">Projetos</h2>
       </div>
+
+      <article class="project-featured reveal">
+        <div class="project-featured-copy">
+          <p class="showcase-label" data-i18n="projetos.featuredLabel">Projeto em destaque</p>
+          <h3>qa-playwright-sd</h3>
+          <p data-i18n="proj.featured.desc">Automação E2E com Playwright e Cucumber (BDD) sobre o automationexercise.com, em arquitetura Page Object Model. Cobre login, cadastro, carrinho, checkout, contato, newsletter e verificações de segurança, com pipeline de CI no GitHub Actions.</p>
+          <div class="project-tags">
+            <span>Playwright</span><span>TypeScript</span><span>Cucumber/BDD</span><span>POM</span>
+          </div>
+          <a href="https://github.com/ThomasTDS/qa-playwright-sd" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
+        </div>
+
+        <div class="code-window">
+          <div class="code-window-head">
+            <span class="code-dots"><span></span><span></span><span></span></span>
+            <span class="code-title">features/login.feature</span>
+          </div>
+          <pre class="code-body"><code><span class="cc"># qa-playwright-sd</span>
+<span class="ck">Scenario:</span> Login com credenciais inválidas
+  <span class="ck">Given</span> que o usuário está na página de login
+  <span class="ck">When</span> ele insere o e-mail <span class="cs">"usuario-invalido@mailinator.com"</span> e a senha <span class="cs">"senhaerrada"</span>
+  <span class="ck">Then</span> ele deve ver a mensagem de erro <span class="cs">"Your email or password is incorrect!"</span></code></pre>
+          <div class="code-pass"><span data-i18n="proj.featured.pass">✓ cenário real, validado em CI</span> <span>· <a href="https://github.com/ThomasTDS/qa-playwright-sd/blob/main/features/login.feature" target="_blank" rel="noopener" data-i18n="cta.viewFile">ver arquivo completo ↗</a></span></div>
+        </div>
+      </article>
 
       <div class="projects-grid reveal">
         <article class="project-card">
-          <h3>qa-playwright-sd</h3>
-          <p>Automação E2E com Playwright em arquitetura POM (Page Object Model), cobrindo fluxos críticos e cenários de exceção estruturados em BDD.</p>
-          <div class="project-tags">
-            <span>Playwright</span><span>TypeScript</span><span>POM</span><span>BDD</span>
-          </div>
-          <a href="https://github.com/ThomasTDS/qa-playwright-sd" target="_blank" rel="noopener">Ver repositório →</a>
-        </article>
-
-        <article class="project-card">
           <h3>restful-booker</h3>
-          <p>Testes de API com Playwright: validação de fluxos de autenticação, operações CRUD e controle de permissões e autorização.</p>
+          <p data-i18n="proj.restfulBooker.desc">Testes de API (BDD/Cucumber + Playwright) contra a Restful Booker API, com validação de schema via Zod e CI no GitHub Actions.</p>
           <div class="project-tags">
-            <span>Playwright</span><span>API Testing</span><span>Autenticação</span>
+            <span>Playwright</span><span>API Testing</span><span>Zod</span>
           </div>
-          <a href="https://github.com/ThomasTDS/restful-booker" target="_blank" rel="noopener">Ver repositório →</a>
+          <a href="https://github.com/ThomasTDS/restful-booker" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
         </article>
 
         <article class="project-card">
           <h3>qa-selenium-sd</h3>
-          <p>Automação E2E com Selenium estruturada em Page Object Model (POM) para validação de fluxos funcionais.</p>
+          <p data-i18n="proj.selenium.desc">Automação E2E com Selenium WebDriver e Cucumber (BDD), estruturada em Page Object Model.</p>
           <div class="project-tags">
-            <span>Selenium</span><span>POM</span><span>E2E</span>
+            <span>Selenium</span><span>Cucumber</span><span>POM</span>
           </div>
-          <a href="https://github.com/ThomasTDS/qa-selenium-sd" target="_blank" rel="noopener">Ver repositório →</a>
+          <a href="https://github.com/ThomasTDS/qa-selenium-sd" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>appium-automation-framework</h3>
+          <p data-i18n="proj.appium.desc">Framework de automação de testes mobile com Appium e WebdriverIO, em BDD (Cucumber) e Page Object Model.</p>
+          <div class="project-tags">
+            <span>Appium</span><span>WebdriverIO</span><span>Mobile</span>
+          </div>
+          <a href="https://github.com/ThomasTDS/appium-automation-framework" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>qa-api-python</h3>
+          <p data-i18n="proj.apiPython.desc">Testes de API em Python (BDD + API Clients) contra a Restful Booker API.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Pytest</span><span>API Testing</span>
+          </div>
+          <a href="https://github.com/ThomasTDS/qa-api-python" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>qa-api-swagger</h3>
+          <p data-i18n="proj.apiSwagger.desc">Testes de contrato e API com OpenAPI/Swagger sobre a GoRest API, com Postman/Newman e CI.</p>
+          <div class="project-tags">
+            <span>Swagger</span><span>Postman</span><span>Contract Testing</span>
+          </div>
+          <a href="https://github.com/ThomasTDS/qa-api-swagger" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>qa-pytest-sd</h3>
+          <p data-i18n="proj.pytest.desc">Versão em Python do qa-playwright-sd: testes E2E do automationexercise.com com Pytest, Playwright e BDD.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Pytest</span><span>Playwright</span>
+          </div>
+          <a href="https://github.com/ThomasTDS/qa-pytest-sd" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>qa-manual-testing</h3>
+          <p data-i18n="proj.manual.desc">Portfólio de teste manual e exploratório: design de casos de teste, sessões exploratórias (SBTM) e relatos de defeitos.</p>
+          <div class="project-tags">
+            <span data-i18n="tag.manualTesting">Teste Manual</span><span data-i18n="tag.exploratory">Exploratório</span><span>SBTM</span>
+          </div>
+          <a href="https://github.com/ThomasTDS/qa-manual-testing" target="_blank" rel="noopener" data-i18n="cta.viewRepo">Ver repositório →</a>
         </article>
       </div>
     </section>
@@ -348,10 +445,10 @@
     <!-- CONTATO -->
     <section id="contato" class="section container contact-section">
       <div class="section-head reveal">
-        <span class="section-index">07 — Contato</span>
-        <h2>Contato</h2>
+        <span class="section-index" data-i18n="contato.index">07 — Contato</span>
+        <h2 data-i18n="contato.title">Contato</h2>
       </div>
-      <p class="contact-lead reveal">
+      <p class="contact-lead reveal" data-i18n="contato.lead">
         Aberto a oportunidades como Analista de Qualidade de Software, com ênfase em automação de testes e
         evolução em Quality Engineering. Vamos conversar?
       </p>
@@ -360,7 +457,10 @@
         <a href="mailto:thomasteixeirads@gmail.com" class="btn btn-primary">thomasteixeirads@gmail.com</a>
         <a href="https://www.linkedin.com/in/thomasteixeira/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
         <a href="https://github.com/ThomasTDS" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-        <a href="assets/cv/Thomas_Teixeira_Curriculo.pdf" class="btn btn-outline" download>Baixar CV</a>
+        <a href="assets/cv/Thomas_Teixeira_Curriculo.pdf" class="btn btn-outline" download>
+              <svg viewBox="0 0 24 24" width="16" height="16" class="btn-icon"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
+              Currículo
+            </a>
       </div>
     </section>
 
@@ -368,10 +468,11 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Thomas Teixeira. Todos os direitos reservados.</p>
+      <p>&copy; <span id="year"></span> Thomas Teixeira. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
