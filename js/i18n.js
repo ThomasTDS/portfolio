@@ -150,6 +150,7 @@ const I18N = {
     'contato.index': '07 — Contato',
     'contato.title': 'Onde você me encontra',
     'contato.lead': 'Aberto a oportunidades como Analista de Qualidade de Software, com ênfase em automação de testes e evolução em Quality Engineering. É isso que eu faço: reduzir a distância entre a dúvida e a entrega confiável. Se seu time precisa disso, fica à vontade pra me chamar.',
+    'email.copied': 'E-mail copiado!',
 
     'footer.rights': 'Todos os direitos reservados.',
 
@@ -308,6 +309,7 @@ const I18N = {
     'contato.index': '07 — Contact',
     'contato.title': 'Where to find me',
     'contato.lead': "Open to opportunities as a Software Quality Analyst, with an emphasis on test automation and growth into Quality Engineering. That's what I do: shrink the distance between doubt and reliable delivery. If your team needs that, feel free to reach out.",
+    'email.copied': 'Email copied!',
 
     'footer.rights': 'All rights reserved.',
 

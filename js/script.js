@@ -28,6 +28,34 @@ navLinks.querySelectorAll('a').forEach((link) => {
 // Ano atual no rodapé
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Copiar e-mail para a área de transferência (em vez de abrir o cliente de e-mail)
+function copyTextFallback(text) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  try { document.execCommand('copy'); } catch (_) {}
+  document.body.removeChild(textarea);
+}
+
+document.querySelectorAll('.copy-email').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const email = btn.dataset.email;
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).catch(() => copyTextFallback(email));
+    } else {
+      copyTextFallback(email);
+    }
+
+    btn.classList.add('is-copied');
+    clearTimeout(btn._copyTimeout);
+    btn._copyTimeout = setTimeout(() => btn.classList.remove('is-copied'), 1800);
+  });
+});
+
 // Revela elementos ao rolar a página
 const revealTargets = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealTargets.length) {
