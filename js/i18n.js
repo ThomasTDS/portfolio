@@ -109,7 +109,7 @@ const I18N = {
     'prev.role2.r2': 'Contribuição para o atingimento da meta anual de vendas.',
     'prev.role3.desc': 'Em 2022, geri 14 equipes de consultoria, fazendo 1:1s, auxiliando diretamente na execução de projetos, realizando treinamentos e gerindo consultorias. Os principais projetos entregues foram voltados a planejamento estratégico, viabilidade econômico-financeira, mapeamento de processos, plano de marketing e plano de negócios.',
     'prev.role3.r1': 'Gestão simultânea de 14 equipes de consultoria, com 100% das entregas em NPS promotor (média 100).',
-    'prev.role4.desc': 'Independente do cargo, na Objetiva Jr. todos éramos consultores e realizávamos e vendíamos consultoria. Entrei na empresa como trainee em 2021, passei por cargos temporários de assessoria e fui gerente de 10 projetos ao longo da minha trajetória.',
+    'prev.role4.desc': 'Independente do cargo, na Objetiva Jr. todos são consultores atuando na execução e venda de consultorias. Entrei na empresa como trainee em 2021, passei por cargos temporários de assessoria e fui gerente de 10 projetos ao longo da minha trajetória.',
     'prev.role4.r1': 'Trajetória iniciada como trainee, com evolução a consultor e gerente de projetos.',
     'prev.role4.r2': '9 de 10 projetos avaliados com NPS 10.',
 
@@ -259,7 +259,7 @@ const I18N = {
     'prev.role2.r2': 'Contributed to hitting the annual sales target.',
     'prev.role3.desc': 'In 2022, I managed 14 consulting teams, running 1:1s, directly supporting project execution, running training sessions, and managing consulting engagements. The main projects we delivered covered strategic planning, economic-financial feasibility, process mapping, marketing plans, and business plans.',
     'prev.role3.r1': 'Managed 14 consulting teams simultaneously, with 100% of deliveries rated as NPS promoters (average score of 100).',
-    'prev.role4.desc': "Regardless of title, everyone at Objetiva Jr. was a consultant who delivered and sold consulting work. I joined as a trainee in 2021, moved through temporary advisory roles, and managed 10 projects over the course of my time there.",
+    'prev.role4.desc': "Regardless of title, everyone at Objetiva Jr. is a consultant, working on delivering and selling consulting projects. I joined as a trainee in 2021, moved through temporary advisory roles, and managed 10 projects over the course of my time there.",
     'prev.role4.r1': 'Started as a trainee, advancing to consultant and project manager.',
     'prev.role4.r2': '9 of 10 projects rated NPS 10.',
 
