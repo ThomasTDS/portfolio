@@ -1,0 +1,10 @@
+# Documentação interna (uso exclusivamente local, não deve ser publicada)
+documentação interna/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
