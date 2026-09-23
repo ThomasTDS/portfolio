@@ -98,9 +98,10 @@
             <a href="https://www.linkedin.com/in/thomasteixeira/" target="_blank" rel="noopener" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
             </a>
-            <a href="mailto:thomasteixeirads@gmail.com" aria-label="E-mail">
+            <button type="button" class="copy-email copy-email-icon" data-email="thomasteixeirads@gmail.com" aria-label="Copiar e-mail">
               <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm19.38 2H2.62L12 12.06 21.38 6ZM3 18h18V7.95l-8.6 5.77a1 1 0 0 1-1.13 0L3 7.95V18Z"/></svg>
-            </a>
+              <span class="copy-tooltip" data-i18n="email.copied">E-mail copiado!</span>
+            </button>
           </div>
         </div>
         </div>
@@ -521,7 +522,10 @@
       </p>
 
       <div class="contact-actions reveal">
-        <a href="mailto:thomasteixeirads@gmail.com" class="btn btn-primary">thomasteixeirads@gmail.com</a>
+        <button type="button" class="btn btn-primary copy-email" data-email="thomasteixeirads@gmail.com" aria-label="Copiar e-mail">
+          <span class="copy-email-label">thomasteixeirads@gmail.com</span>
+          <span class="copy-email-feedback" data-i18n="email.copied">E-mail copiado!</span>
+        </button>
         <a href="https://www.linkedin.com/in/thomasteixeira/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
         <a href="https://github.com/ThomasTDS" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
         <a href="assets/cv/Thomas_Teixeira_Curriculo.pdf" class="btn btn-outline" download>
