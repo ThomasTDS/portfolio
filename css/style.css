@@ -150,14 +150,15 @@ img { max-width: 100%; display: block; }
 .nav-links a:hover { color: var(--text); }
 
 .nav-cta {
-  border: 1px solid var(--line-strong);
-  color: var(--text) !important;
+  background: var(--accent);
+  border: 1px solid transparent;
+  color: #ffffff !important;
   padding: 8px 18px;
   border-radius: 999px;
 }
 .nav-cta:hover {
-  border-color: var(--accent);
-  color: var(--accent) !important;
+  background: #a385f9;
+  color: #ffffff !important;
 }
 
 .header-tools {
@@ -315,6 +316,14 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   border: 1px solid var(--line-strong);
   box-shadow: 14px 14px 0 rgba(139, 92, 246, 0.18);
+  animation: hero-photo-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes hero-photo-in {
+  from { opacity: 0; transform: translateX(48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo { animation: none; }
 }
 .hero-photo img {
   width: 100%;
