@@ -76,7 +76,7 @@ const I18N = {
     'exp1.b4': 'Também atuei em estratégia Shift-Left, construindo a suíte de testes em paralelo à evolução do sistema.',
     'exp1.r1': 'Isso resultou numa taxa superior a 90% de identificação de bugs antes da produção.',
     'exp1.r2': 'Documentação de 28 páginas de evidências de bugs no ERP antes do lançamento.',
-    'exp1.r3': 'Construção de uma pipeline com mais de 100 testes automatizados.',
+    'exp1.r3': 'Construção de uma pipeline com mais de 200 testes automatizados.',
     'exp1.r4': 'Um dos achados mais relevantes foi um bug crítico, identificado via SQL, que permitiria dupla locação de imóvel com contrato ativo.',
     'exp1.r5': 'O ERP e o CMS foram lançados sem reports de bugs por parte dos clientes.',
 
@@ -237,7 +237,7 @@ const I18N = {
     'exp1.b4': 'Also worked on a Shift-Left strategy, building the test suite in parallel with the system\'s development.',
     'exp1.r1': 'This resulted in a bug-detection rate above 90% before production.',
     'exp1.r2': 'Documented 28 pages of bug evidence in the ERP before launch.',
-    'exp1.r3': 'Built a pipeline with more than 100 automated tests.',
+    'exp1.r3': 'Built a pipeline with more than 200 automated tests.',
     'exp1.r4': 'One of the most relevant findings was a critical bug, found via SQL, that would have allowed double-leasing a property under an active contract.',
     'exp1.r5': 'The ERP and CMS launched with zero bug reports from clients.',
 
