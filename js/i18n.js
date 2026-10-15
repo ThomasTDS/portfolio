@@ -129,6 +129,7 @@ const I18N = {
     'projetos.group1': 'Automação Web',
     'projetos.group2': 'API & Contrato',
     'projetos.group3': 'Mobile & Manual',
+    'projetos.group4': 'Dados & Investigação',
     'proj.featured.desc': 'Automação E2E com Playwright e Cucumber (BDD) sobre o automationexercise.com, em arquitetura Page Object Model. Cobre login, cadastro, carrinho, checkout, contato, newsletter e verificações de segurança, com pipeline de CI no GitHub Actions.',
     'proj.featured.pass': '✓ cenário real, validado em CI',
     'proj.featured.stat': '27 cenários automatizados',
@@ -146,6 +147,8 @@ const I18N = {
     'proj.pytest.stat': '48 cenários automatizados',
     'proj.manual.desc': 'Portfólio de teste manual e exploratório: design de casos de teste, sessões exploratórias (SBTM) e relatos de defeitos.',
     'proj.manual.stat': '30 casos de teste',
+    'proj.sqlDefect.desc': 'Investigação de defeitos reais de dados (clientes duplicados, FK órfã, status inconsistente, data inválida, pagamento em duplicidade) num banco simulado, com a mesma metodologia de um bug de produção: sintoma → hipóteses → evidência → causa raiz → correção. Validado por CI com PostgreSQL real.',
+    'proj.sqlDefect.stat': '54 verificações automatizadas',
     'tag.manualTesting': 'Teste Manual',
     'tag.exploratory': 'Exploratório',
 
@@ -290,6 +293,7 @@ const I18N = {
     'projetos.group1': 'Web Automation',
     'projetos.group2': 'API & Contract',
     'projetos.group3': 'Mobile & Manual',
+    'projetos.group4': 'Data & Investigation',
     'proj.featured.desc': 'E2E automation with Playwright and Cucumber (BDD) on automationexercise.com, in a Page Object Model architecture. Covers login, sign-up, cart, checkout, contact, newsletter, and security checks, with a CI pipeline on GitHub Actions.',
     'proj.featured.pass': '✓ real scenario, validated in CI',
     'proj.featured.stat': '27 automated scenarios',
@@ -307,6 +311,8 @@ const I18N = {
     'proj.pytest.stat': '48 automated scenarios',
     'proj.manual.desc': 'Manual and exploratory testing portfolio: test case design, exploratory sessions (SBTM), and defect reports.',
     'proj.manual.stat': '30 test cases',
+    'proj.sqlDefect.desc': 'Investigation of real data defects (duplicate customers, orphaned foreign keys, inconsistent status, invalid dates, duplicate payments) in a simulated database, using the same methodology as a production bug: symptom → hypotheses → evidence → root cause → fix. Validated by CI with a real PostgreSQL instance.',
+    'proj.sqlDefect.stat': '54 automated checks',
     'tag.manualTesting': 'Manual Testing',
     'tag.exploratory': 'Exploratory',
 
