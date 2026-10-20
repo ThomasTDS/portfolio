@@ -149,8 +149,8 @@ const I18N = {
     'proj.manual.stat': '30 casos de teste',
     'proj.sqlDefect.desc': 'Investigação de 9 tipos de defeito real de dados (clientes duplicados, FK órfã, status inconsistente, data inválida, pagamento em duplicidade, entre outros) num banco simulado, com a mesma metodologia de um bug de produção: sintoma → hipóteses → evidência → causa raiz → correção. Validado por CI com PostgreSQL real.',
     'proj.sqlDefect.stat': '90 verificações automatizadas',
-    'proj.sqlPerf.desc': 'Investigação de problemas de performance em consultas SQL (FK sem índice, índice ignorado por função, paginação com OFFSET alto, bloqueio por CREATE INDEX, estatísticas desatualizadas), com a mesma metodologia de um bug de produção: sintoma → hipóteses → evidência (EXPLAIN ANALYZE) → causa raiz → correção → verificação. Continuação do sql-defect-investigation, focada em consultas lentas em vez de dados incorretos.',
-    'proj.sqlPerf.stat': '59 verificações automatizadas',
+    'proj.sqlPerf.desc': 'Investigação de 8 tipos de causa raiz de lentidão em consultas SQL (FK sem índice, índice ignorado por função, paginação com OFFSET alto, bloqueio por CREATE INDEX, estatísticas desatualizadas, entre outros), com a mesma metodologia de um bug de produção: sintoma → hipóteses → evidência (EXPLAIN ANALYZE) → causa raiz → correção → verificação. Continuação do sql-defect-investigation, focada em consultas lentas em vez de dados incorretos.',
+    'proj.sqlPerf.stat': '78 verificações automatizadas',
     'tag.manualTesting': 'Teste Manual',
     'tag.exploratory': 'Exploratório',
 
@@ -315,8 +315,8 @@ const I18N = {
     'proj.manual.stat': '30 test cases',
     'proj.sqlDefect.desc': 'Investigation of 9 types of real data defects (duplicate customers, orphaned foreign keys, inconsistent status, invalid dates, duplicate payments, and more) in a simulated database, using the same methodology as a production bug: symptom → hypotheses → evidence → root cause → fix. Validated by CI with a real PostgreSQL instance.',
     'proj.sqlDefect.stat': '90 automated checks',
-    'proj.sqlPerf.desc': 'Investigation of SQL query performance problems (foreign key without an index, index ignored due to a function, high-OFFSET pagination, CREATE INDEX blocking, outdated statistics), using the same methodology as a production bug: symptom → hypotheses → evidence (EXPLAIN ANALYZE) → root cause → fix → verification. A continuation of sql-defect-investigation, focused on slow queries instead of incorrect data.',
-    'proj.sqlPerf.stat': '59 automated checks',
+    'proj.sqlPerf.desc': 'Investigation of 8 types of SQL query slowness root causes (foreign key without an index, index ignored due to a function, high-OFFSET pagination, CREATE INDEX blocking, outdated statistics, and more), using the same methodology as a production bug: symptom → hypotheses → evidence (EXPLAIN ANALYZE) → root cause → fix → verification. A continuation of sql-defect-investigation, focused on slow queries instead of incorrect data.',
+    'proj.sqlPerf.stat': '78 automated checks',
     'tag.manualTesting': 'Manual Testing',
     'tag.exploratory': 'Exploratory',
 
