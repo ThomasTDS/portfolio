@@ -709,6 +709,10 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   white-space: nowrap;
 }
+.timeline-duration::before {
+  content: " · ";
+  white-space: pre;
+}
 
 .timeline-intro {
   color: var(--text);
@@ -985,4 +989,8 @@ p.project-stat {
   .hero-photo { margin-left: 0; box-shadow: 8px 8px 0 rgba(139, 92, 246, 0.18); }
 
   .section { padding: 56px 20px; }
+
+  .timeline-head h3 span { white-space: nowrap; }
+  .timeline-duration { display: block; margin-top: 2px; color: var(--text-muted); }
+  .timeline-duration::before { content: none; }
 }

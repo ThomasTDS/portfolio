@@ -68,7 +68,7 @@ const I18N = {
     'experiencia.index': '05 — Experiência',
     'experiencia.title': 'Experiência',
     'exp1.role': 'Analista de QA <span>— Jetimob</span>',
-    'exp1.period': 'nov. 2025 — ago. 2026 · 10 meses',
+    'exp1.period': 'nov. 2025 — ago. 2026<span class="timeline-duration">10 meses</span>',
     'exp1.intro': 'Assumi a responsabilidade técnica pela qualidade num momento em que os produtos cresciam mais rápido que a cobertura manual conseguia acompanhar, e passei a tratar testes manuais e automação como uma frente só, não duas separadas.',
     'exp1.b1': 'Execução de testes manuais funcionais, exploratórios, smoke test e regressivos em CRM, ERP, CMS, website e portal imobiliário.',
     'exp1.b2': 'Construção e manutenção de dezenas de cenários de testes automatizados por produto, com Playwright e TypeScript.',
@@ -81,7 +81,7 @@ const I18N = {
     'exp1.r5': 'O ERP e o CMS foram lançados sem reports de bugs por parte dos clientes.',
 
     'exp2.role': 'Estágio em Testes/QA <span>— Jetimob</span>',
-    'exp2.period': 'mai. 2025 — nov. 2025 · 7 meses',
+    'exp2.period': 'mai. 2025 — nov. 2025<span class="timeline-duration">7 meses</span>',
     'exp2.intro': 'Atuei inicialmente com testes manuais, estruturando minha base em QA antes de avançar para automação.',
     'exp2.b1': 'Testes manuais exploratórios, Black Box, White Box e Smoke Test diários, além de regressivos semanais antes dos deploys.',
     'exp2.b2': 'Validação de funcionalidades no website, CRM, ERP (gestão financeira e de aluguéis) e portal imobiliário.',
@@ -91,7 +91,7 @@ const I18N = {
     'exp2.r3': 'Detecção de erros de lógica no ERP (somas, parcelamentos e repasses automatizados) antes da produção.',
 
     'exp3.role': 'Estágio de Pré-Vendas/SDR <span>— Jetimob</span>',
-    'exp3.period': 'out. 2023 — abr. 2025 · 1 ano 7 meses',
+    'exp3.period': 'out. 2023 — abr. 2025<span class="timeline-duration">1 ano 7 meses</span>',
     'exp3.intro': 'Antes de testar sistemas, testava discursos comerciais — a atenção a detalhes e padrões de comportamento já vinha de lá.',
     'exp3.b1': 'Qualificação de leads e identificação de oportunidades de negócio para o time de Closers.',
     'exp3.b2': 'Condução de conversas de descoberta e compreensão das necessidades dos potenciais clientes.',
@@ -233,7 +233,7 @@ const I18N = {
     'experiencia.index': '05 — Experience',
     'experiencia.title': 'Experience',
     'exp1.role': 'QA Analyst <span>— Jetimob</span>',
-    'exp1.period': 'Nov 2025 — Aug 2026 · 10 months',
+    'exp1.period': 'Nov 2025 — Aug 2026<span class="timeline-duration">10 months</span>',
     'exp1.intro': "I took on technical ownership of quality at a point when the products were growing faster than manual coverage could keep up with, and started treating manual testing and automation as a single front, not two separate ones.",
     'exp1.b1': 'Ran functional, exploratory, smoke, and regression manual tests across CRM, ERP, CMS, website, and real estate portal.',
     'exp1.b2': 'Built and maintained dozens of automated test scenarios per product, using Playwright and TypeScript.',
@@ -246,7 +246,7 @@ const I18N = {
     'exp1.r5': 'The ERP and CMS launched with zero bug reports from clients.',
 
     'exp2.role': 'QA/Testing Internship <span>— Jetimob</span>',
-    'exp2.period': 'May 2025 — Nov 2025 · 7 months',
+    'exp2.period': 'May 2025 — Nov 2025<span class="timeline-duration">7 months</span>',
     'exp2.intro': 'I started out with manual testing, building my QA foundation before moving into automation.',
     'exp2.b1': 'Daily exploratory, Black Box, White Box, and Smoke Test manual testing, plus weekly regression tests before deploys.',
     'exp2.b2': 'Validated features across the website, CRM, ERP (financial and rental management), and real estate portal.',
@@ -256,7 +256,7 @@ const I18N = {
     'exp2.r3': 'Caught logic errors in the ERP (sums, installments, and automated rent transfers) before they reached production.',
 
     'exp3.role': 'Pre-Sales/SDR Internship <span>— Jetimob</span>',
-    'exp3.period': 'Oct 2023 — Apr 2025 · 1 year 7 months',
+    'exp3.period': 'Oct 2023 — Apr 2025<span class="timeline-duration">1 year 7 months</span>',
     'exp3.intro': 'Before testing systems, I was testing sales pitches — the attention to detail and behavior patterns already came from there.',
     'exp3.b1': 'Qualified leads and identified business opportunities for the Closers team.',
     'exp3.b2': "Led discovery conversations to understand potential clients' needs.",
@@ -328,6 +328,171 @@ const I18N = {
     'meta.title': 'Thomas Teixeira | Software Quality Analyst',
     'meta.description': 'Portfolio of Thomas Teixeira, Software Quality Analyst specializing in manual and automated testing, Playwright, TypeScript, and continuous integration.',
   },
+
+  es: {
+    'nav.about': 'Sobre mí',
+    'nav.education': 'Formación',
+    'nav.skills': 'Habilidades',
+    'nav.courses': 'Cursos',
+    'nav.experience': 'Experiencia',
+    'nav.projects': 'Proyectos',
+    'nav.contact': 'Contacto',
+    'exp.resultsLabel': 'Resultados',
+
+    'hero.eyebrow': 'Analista de Calidad de Software · QA Engineer',
+    'hero.statement': 'Antes de reportar bugs, ya gestionaba crisis. La lógica sigue siendo la misma — solo cambió el escenario.',
+    'hero.desc': 'Pruebas manuales y automatizadas con foco en <strong>Playwright</strong>, <strong>TypeScript</strong>, pruebas de API e integración con pipelines de <strong>CI/CD</strong>. Trabajo para acortar la distancia entre la duda y una entrega confiable.',
+    'hero.location': 'Santa Maria, Rio Grande do Sul, Brasil',
+    'cta.viewProjects': 'Proyectos',
+    'cta.getInTouch': 'Contacto',
+    'cta.resume': 'Currículum',
+    'cta.viewRepo': 'Ver repositorio →',
+    'cta.viewFile': 'ver archivo completo ↗',
+
+    'sobre.index': '01 — Sobre mí',
+    'sobre.title': 'Sobre mí',
+    'sobre.p1': 'Soy profesional de Calidad de Software, con experiencia en pruebas manuales y automatizadas en productos como CRM, ERP, CMS, sitios web y portales. En Jetimob, pasé de Practicante de Pruebas/QA a Analista de QA, trabajando en la planificación y ejecución de pruebas, la investigación y documentación de defectos, pruebas de API y automatización con Playwright y TypeScript.',
+    'sobre.p2': 'Sin embargo, mi trayectoria profesional comenzó antes de la tecnología. Soy licenciado en Relaciones Públicas por la Universidad Federal de Santa Maria y, antes de trabajar en QA, me dediqué a la consultoría empresarial, la gestión de proyectos y la preventa. En esas experiencias desarrollé una base sólida en procesos, análisis, comunicación, organización y comprensión de distintos contextos de negocio.',
+    'sobre.p3': 'Fue esa combinación la que me acercó a la Calidad de Software. En QA encontré un área en la que puedo aplicar esa mirada sobre procesos y negocio junto con mi interés por la tecnología: investigar problemas, entender requisitos y construir formas más confiables de validar productos.',
+    'sobre.p4': 'Hoy, mi foco está en profundizar mi trabajo en pruebas manuales y automatización, ampliando continuamente mi experiencia en Calidad e Ingeniería de Software.',
+    'sobre.facts.focusLabel': 'Foco actual',
+    'sobre.facts.focusValue': 'Automatización de pruebas & Quality Engineering',
+    'sobre.facts.stackLabel': 'Stack principal',
+    'sobre.facts.stackValue': 'Playwright, TypeScript, BDD, Page Object Model, Postman, SQL',
+    'sobre.facts.langLabel': 'Idiomas',
+    'sobre.facts.langValue': 'Portugués (nativo) · Inglés (C1 Avanzado)',
+    'sobre.facts.locationLabel': 'Ubicación',
+    'sobre.facts.locationValue': 'Santa Maria, RS, Brasil',
+
+    'formacao.index': '02 — Formación',
+    'formacao.title': 'Formación académica',
+    'formacao.degree': 'Licenciatura en Comunicación Social – Relaciones Públicas',
+    'formacao.period': 'mar. 2020 — feb. 2026',
+    'formacao.text': 'Suelo decir que las Relaciones Públicas y QA comparten la misma esencia: gestionar crisis, anticipar riesgos, traducir el impacto técnico en impacto de negocio y defender la "punta" — ya sea la opinión pública o el usuario final de un sistema. Esta formación me dio una visión estratégica y comunicativa que aplico directamente en la forma en que conduzco las pruebas, reporto bugs y converso con los equipos de desarrollo y de negocio.',
+
+    'habilidades.index': '03 — Habilidades',
+    'habilidades.title': 'Habilidades',
+    'skill1.name': 'Pruebas manuales',
+    'skill1.desc': 'Pruebas funcionales y no funcionales, tanto en sistemas web como móviles: Black Box, White Box, Smoke Testing, Exploratorias y Regresión.',
+    'skill2.name': 'Automatización de pruebas',
+    'skill2.desc': 'Web, móvil y API con <strong>Playwright</strong>, Selenium, Appium y <strong>Cucumber (BDD)</strong>; validación de contratos con Zod y <strong>Postman</strong>/Newman.',
+    'skill3.name': 'Bases de datos',
+    'skill3.desc': 'Consultas y validaciones con SQL y PostgreSQL.',
+    'skill4.desc': 'Suites de pruebas integradas al CI/CD y entornos en contenedores.',
+    'skill5.name': 'Gestión de bugs',
+    'skill5.desc': 'Seguimiento de releases y defectos con <strong>Jira</strong>, Azure DevOps y TestRail.',
+    'skill6.desc': '<strong>TypeScript</strong> y <strong>JavaScript</strong>, además de Python, HTML y CSS.',
+    'skill6.name': 'Lenguajes',
+    'skill7.name': 'Productividad con IA',
+    'skill7.desc': 'Apoyo en la creación de casos de prueba, análisis de requisitos, code review, documentación y mapeo de riesgos.',
+    'skill8.name': 'Soft skills',
+    'skill8.desc': 'Comunicación que acompaña el desarrollo de punta a punta, equilibrando la salud del negocio y la calidad para el usuario final.',
+
+    'cursos.index': '04 — Cursos',
+    'cursos.title': 'Cursos y certificaciones',
+    'cursos.group1': 'Técnico & QA',
+    'cursos.group2': 'Procesos & pensamiento analítico',
+    'cursos.group3': 'Idiomas',
+    'cursos.efset.meta': 'EF SET · Septiembre de 2026',
+
+    'experiencia.index': '05 — Experiencia',
+    'experiencia.title': 'Experiencia',
+    'exp1.role': 'Analista de QA <span>— Jetimob</span>',
+    'exp1.period': 'nov. 2025 — ago. 2026<span class="timeline-duration">10 meses</span>',
+    'exp1.intro': 'Asumí la responsabilidad técnica por la calidad en un momento en que los productos crecían más rápido de lo que la cobertura manual podía acompañar, y pasé a tratar las pruebas manuales y la automatización como un solo frente, no como dos separados.',
+    'exp1.b1': 'Ejecución de pruebas manuales funcionales, exploratorias, smoke test y de regresión en CRM, ERP, CMS, sitio web y portal inmobiliario.',
+    'exp1.b2': 'Construcción y mantenimiento de decenas de escenarios de pruebas automatizadas por producto, con Playwright y TypeScript.',
+    'exp1.b3': 'Integré pruebas de API con Postman y consultas SQL en PostgreSQL a las suites automatizadas, ejecutadas en pipelines de CI/CD.',
+    'exp1.b4': 'También trabajé con una estrategia Shift-Left, construyendo la suite de pruebas en paralelo a la evolución del sistema.',
+    'exp1.r1': 'Esto resultó en una tasa superior al 90% de bugs identificados antes de producción.',
+    'exp1.r2': 'Documentación de 28 páginas de evidencias de bugs en el ERP antes del lanzamiento.',
+    'exp1.r3': 'Construcción de un pipeline con más de 200 pruebas automatizadas.',
+    'exp1.r4': 'Uno de los hallazgos más relevantes fue un bug crítico, identificado mediante SQL, que permitía alquilar dos veces un inmueble con un contrato activo.',
+    'exp1.r5': 'El ERP y el CMS se lanzaron sin ningún bug reportado por los clientes.',
+
+    'exp2.role': 'Práctica en Pruebas/QA <span>— Jetimob</span>',
+    'exp2.period': 'may. 2025 — nov. 2025<span class="timeline-duration">7 meses</span>',
+    'exp2.intro': 'Comencé con pruebas manuales, construyendo mi base en QA antes de avanzar hacia la automatización.',
+    'exp2.b1': 'Pruebas manuales exploratorias, Black Box, White Box y Smoke Test diarias, además de pruebas de regresión semanales antes de cada deploy.',
+    'exp2.b2': 'Validación de funcionalidades en el sitio web, CRM, ERP (gestión financiera y de alquileres) y portal inmobiliario.',
+    'exp2.b3': 'Documentación de casos de prueba y registro de bugs en Jira.',
+    'exp2.r1': 'Identificación de bugs críticos en APIs esenciales para el registro de inmuebles.',
+    'exp2.r2': 'Encontré fallas en la lógica de distribución automática de leads del CRM.',
+    'exp2.r3': 'Detección de errores de lógica en el ERP (sumas, cuotas y transferencias automatizadas) antes de producción.',
+
+    'exp3.role': 'Práctica en Preventa/SDR <span>— Jetimob</span>',
+    'exp3.period': 'oct. 2023 — abr. 2025<span class="timeline-duration">1 año y 7 meses</span>',
+    'exp3.intro': 'Antes de probar sistemas, probaba discursos comerciales — la atención a los detalles y a los patrones de comportamiento ya venía de ahí.',
+    'exp3.b1': 'Calificación de leads e identificación de oportunidades de negocio para el equipo de Closers.',
+    'exp3.b2': 'Conducción de conversaciones de descubrimiento para comprender las necesidades de los clientes potenciales.',
+    'exp3.b3': 'Agendamiento de reuniones y seguimiento de oportunidades a lo largo del proceso comercial.',
+    'exp3.r1': 'Calificación del mayor cliente de la historia de la empresa y récord de MRR mensual entre los SDRs.',
+    'exp3.r2': 'Récord semanal de reuniones agendadas, con alta tasa de conversión en ventas.',
+
+    'exp.growthNote': 'Comencé mi trayectoria en Jetimob como SDR y me trasladé internamente al área de Calidad de Software, donde encontré mi verdadera vocación técnica.',
+
+    'prev.summary': 'Trayectoria anterior — Objetiva Jr. Consultoría Empresarial (2021 — 2023)',
+    'prev.text': 'Antes de Jetimob, acumulé dos años y siete meses de experiencia en consultoría empresarial júnior, pasando por distintos frentes de gestión y proyectos. Esta trayectoria desarrolló habilidades que hoy aplico directamente en QA: comunicación con stakeholders, visión de negocio, gestión de procesos y organización orientada a resultados.',
+    'prev.role1.desc': 'Durante mi paso por la presidencia ejecutiva, mi rol giraba en torno a gestionar la relación interna y externa de la empresa: prospección de socios, diseño y gestión del programa de socios, y creación de la planificación estratégica de la empresa.',
+    'prev.role1.r1': 'Prospección y gestión de 22 socios estratégicos.',
+    'prev.role1.r2': 'Desarrollo de una planificación estratégica orientada por OKRs y KPIs.',
+    'prev.role1.r3': 'Gestión y reactivación de un evento institucional enfocado en la diversidad, con 10 ediciones realizadas a lo largo del año.',
+    'prev.role2.desc': 'Asumí el área comercial después de que el antiguo director dejara la empresa. Allí era responsable de la capacitación y gestión de los equipos de SDR/BDR y Closers, haciendo seguimiento del embudo de ventas y dando soporte al equipo. También trabajaba directamente en ventas.',
+    'prev.role2.r1': 'Récord individual de prospecciones por cold call.',
+    'prev.role2.r2': 'Contribución al cumplimiento de la meta interna anual de ventas.',
+    'prev.role2.r3': 'Realización de 15 capacitaciones de ventas para el equipo comercial a lo largo del año.',
+    'prev.role3.desc': 'En 2022 gestioné 14 equipos de consultoría, haciendo 1:1s, apoyando directamente la ejecución de proyectos, dando capacitaciones y gestionando consultorías. Los principales proyectos entregados se enfocaron en planificación estratégica, viabilidad económico-financiera, mapeo de procesos, plan de marketing y plan de negocios.',
+    'prev.role3.r1': 'Gestión simultánea de 14 equipos de consultoría, con el 100% de las entregas con NPS promotor (promedio de 100).',
+    'prev.role3.r2': 'Conducción de 4 auditorías de proyecto, con recolección de NPS en todas las entregas.',
+    'prev.role3.r3': 'Concreción de 5 reventas de proyectos junto a los equipos de consultoría.',
+    'prev.role3.r4': 'Realización de más de 20 capacitaciones para los equipos de consultores.',
+    'prev.role4.desc': 'Independientemente del cargo, en Objetiva Jr. todos son consultores que trabajan en la ejecución y venta de consultorías. Entré a la empresa como trainee en 2021, pasé por cargos temporales de asesoría y fui gerente de 10 proyectos a lo largo de mi trayectoria.',
+    'prev.role4.r1': 'Trayectoria iniciada como trainee, con evolución a consultor y gerente de proyectos.',
+    'prev.role4.r2': '10 proyectos evaluados con NPS promotor, 9 de ellos con nota 10.',
+    'prev.role4.r3': 'Cerca de R$ 160 mil vendidos en consultoría durante todo mi período en la empresa.',
+    'prev.role4.r4': 'Gerencia de 6 proyectos de consultoría enfocados en Planificación Estratégica y Mapeo de Procesos.',
+    'prev.role4.r5': 'Implementación de procesos de Customer Success.',
+
+    'projetos.index': '06 — Proyectos',
+    'projetos.title': 'Proyectos',
+    'projetos.featuredLabel': 'Proyecto destacado',
+    'projetos.group1': 'Web, Móvil & Manual',
+    'projetos.group2': 'API & Contrato',
+    'projetos.group4': 'Investigación: Datos & Seguridad',
+    'proj.featured.desc': 'Automatización E2E con Playwright y Cucumber (BDD) sobre automationexercise.com, con arquitectura Page Object Model. Cubre inicio de sesión, registro, carrito, checkout, contacto, newsletter y verificaciones de seguridad, con pipeline de CI en GitHub Actions.',
+    'proj.featured.pass': '✓ escenario real, validado en CI',
+    'proj.featured.stat': '27 escenarios automatizados',
+    'proj.restfulBooker.desc': 'Pruebas de API (BDD/Cucumber + Playwright) contra la Restful Booker API, con validación de esquemas mediante Zod y CI en GitHub Actions.',
+    'proj.restfulBooker.stat': '46 pruebas automatizadas',
+    'proj.appium.desc': 'Framework de automatización de pruebas móviles con Appium y WebdriverIO, en BDD (Cucumber) y Page Object Model.',
+    'proj.appium.stat': '16 escenarios automatizados',
+    'proj.apiPython.desc': 'Pruebas de API en Python (BDD + API Clients) contra la Restful Booker API.',
+    'proj.apiPython.stat': '104 pruebas automatizadas',
+    'proj.apiSwagger.desc': 'Pruebas de contrato y de API con OpenAPI/Swagger sobre la GoRest API, con Postman/Newman y CI.',
+    'proj.apiSwagger.stat': '67 pruebas automatizadas',
+    'proj.pytest.desc': 'Versión en Python de qa-playwright-sd: pruebas E2E de automationexercise.com con Pytest, Playwright y BDD.',
+    'proj.pytest.stat': '88 pruebas automatizadas',
+    'proj.manual.desc': 'Portafolio de pruebas manuales y exploratorias: diseño de casos de prueba, sesiones exploratorias (SBTM) y reportes de defectos.',
+    'proj.manual.stat': '30 casos de prueba',
+    'proj.sqlDefect.desc': 'Investigación de 9 tipos de defectos reales de datos (clientes duplicados, FK huérfana, estado inconsistente, fecha inválida, pago duplicado, entre otros) en una base simulada, con la misma metodología de un bug de producción: síntoma → hipótesis → evidencia → causa raíz → corrección. Validado por CI con PostgreSQL real.',
+    'proj.sqlDefect.stat': '90 verificaciones automatizadas',
+    'proj.sqlPerf.desc': 'Investigación de 8 tipos de causa raíz de lentitud en consultas SQL (FK sin índice, índice ignorado por una función, paginación con OFFSET alto, bloqueo por CREATE INDEX, estadísticas desactualizadas, entre otros), con la misma metodología de un bug de producción: síntoma → hipótesis → evidencia (EXPLAIN ANALYZE) → causa raíz → corrección → verificación. Continuación de sql-defect-investigation, enfocada en consultas lentas en lugar de datos incorrectos.',
+    'proj.sqlPerf.stat': '78 verificaciones automatizadas',
+    'proj.crapi.desc': 'Investigación de seguridad de API sobre crAPI, una aplicación intencionalmente vulnerable de OWASP, cubriendo el OWASP API Security Top 10: BOLA, BFLA, falsificación de JWT, mass assignment, SSRF, SQL/NoSQL injection, path traversal, entre otras. Cada falla está documentada con la solicitud, evidencia real, CVSS y una recomendación de corrección, incluyendo un encadenamiento que llega a la ejecución remota de comandos (RCE), una PoC de corrección de la SQL injection y un escaneo con OWASP ZAP en CI.',
+    'proj.crapi.stat': '12 vulnerabilidades confirmadas',
+    'tag.manualTesting': 'Pruebas Manuales',
+    'tag.exploratory': 'Exploratorias',
+
+    'contato.index': '07 — Contacto',
+    'contato.title': 'Dónde encontrarme',
+    'contato.lead': 'Abierto a oportunidades como Analista de Calidad de Software, con énfasis en automatización de pruebas y crecimiento en Quality Engineering. Eso es lo que hago: acortar la distancia entre la duda y una entrega confiable. Si tu equipo lo necesita, no dudes en escribirme.',
+    'email.copied': '¡Correo copiado!',
+
+    'footer.rights': 'Todos los derechos reservados.',
+
+    'meta.title': 'Thomas Teixeira | Analista de Calidad de Software',
+    'meta.description': 'Portafolio de Thomas Teixeira, Analista de Calidad de Software especializado en pruebas manuales y automatizadas, Playwright, TypeScript e integración continua.',
+  },
 };
 
 function applyLanguage(lang) {
@@ -343,7 +508,8 @@ function applyLanguage(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
-  document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+  const HTML_LANG = { pt: 'pt-BR', en: 'en', es: 'es' };
+  document.documentElement.lang = HTML_LANG[lang] || 'pt-BR';
   document.documentElement.dataset.lang = lang;
 
   if (dict['meta.title']) document.title = dict['meta.title'];
@@ -354,7 +520,8 @@ function applyLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const initialLang = document.documentElement.dataset.lang === 'en' ? 'en' : 'pt';
+  const savedLang = document.documentElement.dataset.lang;
+  const initialLang = I18N[savedLang] ? savedLang : 'pt';
   applyLanguage(initialLang);
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
