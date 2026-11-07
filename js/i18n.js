@@ -16,6 +16,7 @@ const I18N = {
     'cta.viewProjects': 'Projetos',
     'cta.getInTouch': 'Contato',
     'cta.resume': 'Currículo',
+    'cv.href': 'assets/cv/Thomas_Teixeira_Curriculo.pdf?v=2',
     'cta.viewRepo': 'Ver repositório →',
     'cta.viewFile': 'ver arquivo completo ↗',
 
@@ -181,6 +182,7 @@ const I18N = {
     'cta.viewProjects': 'Projects',
     'cta.getInTouch': 'Contact',
     'cta.resume': 'Resume',
+    'cv.href': 'assets/cv/Thomas_Teixeira_Resume_EN.pdf?v=1',
     'cta.viewRepo': 'View repository →',
     'cta.viewFile': 'view full file ↗',
 
@@ -346,6 +348,7 @@ const I18N = {
     'cta.viewProjects': 'Proyectos',
     'cta.getInTouch': 'Contacto',
     'cta.resume': 'Currículum',
+    'cv.href': 'assets/cv/Thomas_Teixeira_Curriculo_ES.pdf?v=1',
     'cta.viewRepo': 'Ver repositorio →',
     'cta.viewFile': 'ver archivo completo ↗',
 
@@ -502,6 +505,11 @@ function applyLanguage(lang) {
     if (dict[key] !== undefined) {
       el.innerHTML = dict[key];
     }
+  });
+
+  document.querySelectorAll('[data-i18n-href]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-href');
+    if (dict[key] !== undefined) el.setAttribute('href', dict[key]);
   });
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
